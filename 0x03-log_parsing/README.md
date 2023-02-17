@@ -9,6 +9,8 @@ This directory contains a script that reads `stdin` line by line and computes th
 		* if a status code doesn’t appear or is not an integer, nothing is printed for this status code
 		* format: `<status code>: <number>`
 		* status code is printed in ascending order
+
+
 **Warning**: In this sample, you will have random value - it’s normal to not have the same output as this one.
 ```
 alexa@ubuntu:~/0x03-log_parsing$ cat 0-generator.py
