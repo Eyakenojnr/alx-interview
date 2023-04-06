@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Solution to the Prime game problem
+Solution to the Prime problem
 """
 
 
@@ -8,7 +8,7 @@ def isWinner(x, nums):
     """
     Find winner of the prime game
     Args:
-        x   : number of rounds
+        x: number of rounds
         nums: array of n
     Return:
         Name of player that won most rounds
@@ -16,7 +16,7 @@ def isWinner(x, nums):
     # returning None if winner cannot be determined
     if x is None or x == 0 or nums is None or nums == []:
         return None
-    
+
     Maria = 0
     Ben = 0
     for iter in range(x):
@@ -29,17 +29,17 @@ def isWinner(x, nums):
         return "Ben"
     elif Maria > Ben:
         return "Maria"
-    return None
+
 
 def prime_numbers(n):
     """
     Return prime numbers between 1 and n
     Args:
-        n : range upper bound, range lower bound is always 1
+        n: range upper bound, range lower bound is always 1
     """
     prime = []
     bridge = [True] * (n + 1)
-    
+
     for iter in range(2, n + 1):
         if (bridge[iter]):
             prime.append(iter)
