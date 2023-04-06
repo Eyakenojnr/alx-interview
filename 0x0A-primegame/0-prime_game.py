@@ -29,6 +29,7 @@ def isWinner(x, nums):
         return "Ben"
     elif Maria > Ben:
         return "Maria"
+    return None
 
 def prime_numbers(n):
     """
