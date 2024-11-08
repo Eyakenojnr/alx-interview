@@ -4,6 +4,7 @@
 import sys
 
 def print_usage_and_exit(message):
+    """Prints Usage message"""
     print(message)
     sys.exit(1)
 
@@ -25,6 +26,7 @@ def solve_nqueens(n, row=0, queens=[]):
             solve_nqueens(n, row + 1, queens + [[row, col]])
 
 def main():
+    """Main"""
     # Check for correct number of arguments
     if len(sys.argv) != 2:
         print_usage_and_exit("Usage: nqueens N")
