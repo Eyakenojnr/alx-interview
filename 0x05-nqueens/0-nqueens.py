@@ -1,22 +1,24 @@
 #!/usr/bin/python3
-"""N-Queens Challenge"""
+'''N-Queens Challenge'''
+
 
 import sys
 
+
 def print_usage_and_exit(message):
-    """Prints Usage message"""
+    '''Prints Usage message'''
     print(message)
     sys.exit(1)
 
 def is_safe(queens, row, col):
-    """Check if placing a queen at (row, col) is safe from attacks."""
+    '''Check if placing a queen at (row, col) is safe from attacks.'''
     for r, c in queens:
         if c == col or r - c == row - col or r + c == row + col:
             return False
     return True
 
 def solve_nqueens(n, row=0, queens=[]):
-    """Recursively solve the N-Queens problem and collect solutions."""
+    '''Recursively solve the N-Queens problem and collect solutions.'''
     if row == n:
         print(queens)
         return
@@ -26,7 +28,7 @@ def solve_nqueens(n, row=0, queens=[]):
             solve_nqueens(n, row + 1, queens + [[row, col]])
 
 def main():
-    """Main"""
+    '''Main'''
     # Check for correct number of arguments
     if len(sys.argv) != 2:
         print_usage_and_exit("Usage: nqueens N")
